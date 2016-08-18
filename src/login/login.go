@@ -12,7 +12,7 @@ type UserFormData struct {
 Show Login page.
 */
 func Login(ctx *iris.Context) {
-	ctx.Render("login.html", nil)
+	ctx.Render("login.html", nil, iris.RenderOptions{"layout": iris.NoLayout})
 }
 
 //PostLogin ...
@@ -20,4 +20,5 @@ func PostLogin(ctx *iris.Context) {
 	user := UserFormData{}
 	ctx.ReadForm(&user)
 	ctx.Write("in function of PostLogin. %s, %s", user.Email, user.Password)
+	ctx.Redirect("/p", iris.StatusOK)
 }
