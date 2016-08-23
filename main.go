@@ -47,6 +47,7 @@ func main() {
 		pf.Get("/prepareForEx", platform.PrepareForEx)
 		pf.Get("/record", platform.Record)
 		pf.Get("/rank", platform.Rank)
+		pf.Get("/bandScore", platform.BandScore)
 		pf.Get("/vocabularyTest", platform.VocabularyTest)
 		pf.Get("/profile", platform.Profile)
 	}
