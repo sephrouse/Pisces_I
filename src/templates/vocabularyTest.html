@@ -1,0 +1,46 @@
+<h2 class="page-title">单词测验</h2>
+<div class="row">
+  <div class="col-md-6">
+    <section class="widget">
+      <header>
+        <h4>{{.Title}} <small>{{.SubTitle}}</small></h4>
+      </header>
+      <div class="body">
+        <p>{{.Content}}</p>
+
+        <form>
+          {{range .Questions}}
+          <fieldset>
+            <legend class="section"><strong>{{.Subject}}</strong></legend>
+            <div class="row">
+              <div class="col-md-12">
+                {{range .Options}}
+                <p>{{.}}</p>
+                {{end}}
+              </div>
+            </div>
+            <div class="row margin-bottom text-align-right">
+              <div class="col-md-12">
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-success">
+                    <input type="radio" name="options" id="option1"> A
+                  </label>
+                  <label class="btn btn-success">
+                    <input type="radio" name="options" id="option2"> B
+                  </label>
+                  <label class="btn btn-success">
+                    <input type="radio" name="options" id="option3"> C
+                  </label>
+                  <label class="btn btn-success">
+                    <input type="radio" name="options" id="option4"> D
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          {{end}}
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
