@@ -46,7 +46,7 @@ func main() {
 
 		//pf.Static("/p", "./public/assets", 1)
 
-		pf.Get("/", platform.Index)
+		pf.Get("/index", platform.Index)
 		pf.Get("/prepareForEx", platform.PrepareForEx)
 		pf.Get("/record", platform.Record)
 		pf.Get("/rank", platform.Rank)

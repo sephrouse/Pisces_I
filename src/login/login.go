@@ -20,5 +20,5 @@ func PostLogin(ctx *iris.Context) {
 	user := UserFormData{}
 	ctx.ReadForm(&user)
 	ctx.Write("in function of PostLogin. %s, %s", user.Email, user.Password)
-	ctx.Redirect("/p", iris.StatusOK)
+	ctx.Redirect("/p/index", iris.StatusOK)
 }
